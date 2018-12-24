@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <include file="Base/head"/>
+    <include file="Base/header" menu="2"/>
+<body id="blog" >
+
+<div class="am-g am-g-fixed blog-fixed" style="background-color: white;">
+    <div class="am-u-md-8 am-u-sm-12">
+        
+        <volist name="data" id="vo">
+            <article class="am-g blog-entry-article">
+                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img" style="height: 200px;width: 400px；">
+                    <a href="{:U('Article/article_info')}?id={$vo.id}">
+                    <img src="__ROOT__{$vo.pic}" alt="出错请联系管理员" onerror="this.src='__PUBLIC__/Home/images/article_null.jpg'" class="am-u-sm-12" style="height: 100%;width: 100%;">
+                    </a>
+                </div>
+                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+                <h1><a href="{:U('Article/article_info')}?id={$vo.id}">{$vo.title}</a></h1>
+                    <p>{$vo.desc}</p>
+                    <span class="am-badge am-badge-primary am-radius">{$vo.author} &nbsp;</span>
+                    <span class="am-badge am-badge-success am-radius">{$vo['time'] | date="Y-m-d H:i:s",###}</span>
+                    <span class="am-badge am-badge-warning am-radius">{$vo.visitor}</span>
+                    <!-- <p style="border:1px solid"><a href="" class="">continue reading</a></p> -->
+                </div>
+            </article>
+        </volist>   
+        <!-- {$code |dump} -->
+        <!-- {$ismobile | dump} -->
+         <div class="pages" ><ul style="padding: 0">{$page}</ul></div> 
+    </div>
+    
+    <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
+         <include file="Base/sidebar"/>
+    </div>
+</div>
+    
+    <div data-am-widget="gotop" class="am-gotop am-gotop-fixed" >
+        <a href="#top" title="">
+            <img class="am-gotop-icon-custom" src="__PUBLIC__/Home/gif/goTop.gif" />
+        </a>
+    </div>
+
+    <include file="Base/footer"/>
+
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="__PUBLIC__/Home/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="__PUBLIC__/Home/js/amazeui.min.js"></script>
+</body>
+</html>

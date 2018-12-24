@@ -1,0 +1,87 @@
+<!--会员列表-->
+<extend name="Base/index" />
+<block name="content">
+
+    <article class="page-container">
+        <form action="" method="post" class="form form-horizontal" id="form_admin_add">
+
+            <div class="panel panel-default">
+                <div class="panel-header">详细</div>
+                <div class="panel-body">
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>用户名：</label>
+                        <div class="formControls col-xs-8 col-sm-9">
+                            <input type="text" class="input-text" value="" placeholder="" id="admin_name" name="admin_name">
+                        </div>
+                    </div>
+
+
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>密码：</label>
+                        <div class="formControls col-xs-8 col-sm-9">
+                            <input type="password" class="input-text" value="" autocomplete="off" id="password" name="password">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>确认密码：</label>
+                        <div class="formControls col-xs-8 col-sm-9">
+                            <input type="password" class="input-text" value="" autocomplete="off" id="password2" name="password2">
+                        </div>
+                    </div>
+
+                    <div class="row cl">
+                        <div class="col-xs-4 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                            <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+
+    </article>
+
+
+    <!--请在下方写此页面业务相关的脚本-->
+    <script type="text/javascript" src="__PUBLIC__/Admin/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+
+    <script type="text/javascript">
+
+        $(function(){
+
+            $("#form_admin_add").validate({
+                onkeyup:false,
+                focusCleanup:true,
+                success:"valid",
+                submitHandler:function(form){
+
+                    $.ajax({
+                        url:"{:U('Admin/admin_add_validate')}",
+                        type: "POST",
+                        data: $("#form_admin_add").serialize(),
+                        success:function(res){
+
+                            if (res == 1) {alert("添加成功"); layer_close();}
+                            else if (res == 2) {alert("添加失败");}
+
+                            else if (res == 11) {alert('用户名为空');}
+                            else if (res == 12) {alert('密码为空');}
+                            else if (res == 13) {alert('确认密码为空');}
+                            else if (res == 14) {alert('两次密码不一致');}
+
+                            else if (res == 21) {alert('用户已存在');}
+                        },
+                        error:function(res){
+                            alert("提交失败");
+                        }
+                    });
+                }
+            });
+        });
+
+    </script>
+
+</block>

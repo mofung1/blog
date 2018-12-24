@@ -1,0 +1,65 @@
+<!--管理员列表-->
+<extend name="Base/index" />
+<block name="content">
+
+    <!--导航标题-->
+    <include file="Base/_title" title1="后台" title2="系统管理" title3="数据管理"/>
+
+    <!--内容-->
+    <div class="page-container">
+
+        <div class="mt-20">
+            <table class="table table-border table-bordered table-hover table-bg table-sort">
+                <thead>
+                <tr class="text-c">
+                    <th width="40">序号</th>                  <!--1-->
+                    <th width="80">生成时间</th>           <!--2-->
+                    <th width="300">备注</th>                  <!--3-->
+                    <th width="80">操作</th>                 <!--4-->
+
+                </tr>
+                </thead>
+
+                <tbody>
+                <volist name="list" id="vo">
+                    <tr class="text-c">
+                        <td>{$i}</td>
+                        <td>{$vo.add_time|date='Y-m-d',###}</td>
+                        <td>{$vo.remark}</td>
+
+                        <td class="td-manage">
+                            <a title="查看" href="javascript:;" onclick="database_recover()" class="ml-5" style="text-decoration:none">恢复</a>
+
+                        </td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--请在下方写此页面业务相关的脚本-->
+    <script type="text/javascript" src="__PUBLIC__/Admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(function(){
+            $('.table-sort').dataTable({
+                "aaSorting": [[0, "asc" ]],//默认第几个排序
+                "bStateSave": true,//状态保存
+                "aoColumnDefs": [
+                    //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+                    {"orderable":false,"aTargets":[3]}// 制定列不参与排序
+                ]
+            });
+        });
+
+        function database_recover()
+        {
+            layer.msg('数据恢复成功!',{icon: 0,time:1000});
+        }
+
+    </script>
+
+</block>
+

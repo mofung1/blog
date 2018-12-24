@@ -1,0 +1,476 @@
+[ 2018-06-12T22:19:54+08:00 ] 127.0.0.1 /blog/index.php/Admin/login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042587s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042629s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000332s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000360s ]
+
+[ 2018-06-12T22:19:57+08:00 ] 127.0.0.1 /blog/index.php/Admin/Login/login_validate.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+SQL: SHOW COLUMNS FROM `blog_admin` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `blog_admin` WHERE `admin_name` = 'xiaomo' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-06-12T22:19:58+08:00 ] 127.0.0.1 /blog/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046239s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046283s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000434s ]
+
+[ 2018-06-12T22:19:58+08:00 ] 127.0.0.1 /blog/index.php/Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+NOTIC: [8] Undefined variable: is_mysql D:\PHPstudy\WWW\blog\Application\Admin\Controller\IndexController.class.php 第 33 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045702s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045761s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2018-06-12T22:19:58+08:00 ] 127.0.0.1 /blog/index.php/Admin/login/login.html?admin_name=xiaomo&password=123456
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000349s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003821s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003856s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000366s ]
+
+[ 2018-06-12T22:20:00+08:00 ] 127.0.0.1 /blog/index.php/Admin/Cate/category_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+SQL: SHOW COLUMNS FROM `blog_cate` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `blog_cate` ORDER BY sort desc  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048126s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048186s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000235s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000486s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000530s ]
+
+[ 2018-06-12T22:20:05+08:00 ] 127.0.0.1 /blog/index.php/Admin/Link/link_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `blog_link` ORDER BY sort desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 73 行.
+NOTIC: [8] Undefined index: link_url D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 74 行.
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 73 行.
+NOTIC: [8] Undefined index: link_url D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040406s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040442s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000172s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000359s ]
+
+[ 2018-06-12T22:20:07+08:00 ] 127.0.0.1 /blog/index.php/Admin/Link/link_edit.html?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000370s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `blog_link` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\9a41e2d0f6e83fa5a46ff72f579092cd.php 第 45 行.
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\9a41e2d0f6e83fa5a46ff72f579092cd.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012697s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000995s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001054s ]
+
+[ 2018-06-12T22:20:48+08:00 ] 127.0.0.1 /blog/index.php/Admin/Link/link_update_validate.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `blog_link` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `blog_link` SET `title`='jquery',`sort`='3',`desc`='jquery',`url`='http://www.jq22.com/' WHERE `id` = 1 [ RunTime:0.0004s ]
+
+[ 2018-06-12T22:20:49+08:00 ] 127.0.0.1 /blog/index.php/Admin/Link/link_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0236s ]
+SQL: SELECT * FROM `blog_link` ORDER BY sort desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 73 行.
+NOTIC: [8] Undefined index: link_url D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 74 行.
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 73 行.
+NOTIC: [8] Undefined index: link_url D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007076s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007122s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000365s ]
+
+[ 2018-06-12T22:21:12+08:00 ] 127.0.0.1 /blog/index.php/Admin/Link/link_add.html?id=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053383s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000711s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000765s ]
+
+[ 2018-06-12T22:21:45+08:00 ] 127.0.0.1 /blog/index.php/Admin/Link/link_add_validate.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `blog_link` WHERE `title` = 'Bootstrap中文网' LIMIT 1   [ RunTime:0.0004s ]
+SQL: INSERT INTO `blog_link` (`title`,`url`,`sort`,`desc`) VALUES ('Bootstrap中文网','http://v3.bootcss.com/','0','bootstrap中文网') [ RunTime:0.0004s ]
+
+[ 2018-06-12T22:21:46+08:00 ] 127.0.0.1 /blog/index.php/Admin/Link/link_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `blog_link` ORDER BY sort desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 73 行.
+NOTIC: [8] Undefined index: link_url D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 74 行.
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 73 行.
+NOTIC: [8] Undefined index: link_url D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 74 行.
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 73 行.
+NOTIC: [8] Undefined index: link_url D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005642s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005673s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000217s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000369s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000400s ]
+
+[ 2018-06-12T22:21:50+08:00 ] 127.0.0.1 /blog/index.php/Admin/Link/link_edit.html?id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000551s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `blog_link` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\9a41e2d0f6e83fa5a46ff72f579092cd.php 第 45 行.
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\9a41e2d0f6e83fa5a46ff72f579092cd.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008097s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000414s ]
+
+[ 2018-06-12T22:21:54+08:00 ] 127.0.0.1 /blog/index.php/Admin/Link/link_update_validate.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `blog_link` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `blog_link` SET `title`='Bootstrap中文网',`sort`='5',`desc`='bootstrap中文网',`url`='http://v3.bootcss.com/' WHERE `id` = 8 [ RunTime:0.0004s ]
+
+[ 2018-06-12T22:21:55+08:00 ] 127.0.0.1 /blog/index.php/Admin/Link/link_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `blog_link` ORDER BY sort desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 73 行.
+NOTIC: [8] Undefined index: link_url D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 74 行.
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 73 行.
+NOTIC: [8] Undefined index: link_url D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 74 行.
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 73 行.
+NOTIC: [8] Undefined index: link_url D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005713s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005744s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000235s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000403s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000434s ]
+
+[ 2018-06-12T22:27:00+08:00 ] 127.0.0.1 /blog/index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006769s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006806s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000525s ]
+
+[ 2018-06-12T22:27:00+08:00 ] 127.0.0.1 /blog/index.php/Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000792s ]
+NOTIC: [8] Undefined variable: is_mysql D:\PHPstudy\WWW\blog\Application\Admin\Controller\IndexController.class.php 第 33 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006431s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006495s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000216s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000373s ]
+
+[ 2018-06-12T22:27:04+08:00 ] 127.0.0.1 /blog/index.php/Admin/Comment/comment_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `blog_comment` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `blog_comment`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045394s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045445s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000184s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000311s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000336s ]
+
+[ 2018-06-12T22:27:16+08:00 ] 127.0.0.1 /blog/index.php/Admin/Link/link_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `blog_link` ORDER BY sort desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 73 行.
+NOTIC: [8] Undefined index: link_url D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 74 行.
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 73 行.
+NOTIC: [8] Undefined index: link_url D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 74 行.
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 73 行.
+NOTIC: [8] Undefined index: link_url D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005900s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005932s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000587s ]
+
+[ 2018-06-12T22:27:19+08:00 ] 127.0.0.1 /blog/index.php/Admin/Link/link_edit.html?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0238s ]
+SQL: SELECT * FROM `blog_link` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\9a41e2d0f6e83fa5a46ff72f579092cd.php 第 45 行.
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\9a41e2d0f6e83fa5a46ff72f579092cd.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013793s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000726s ]
+
+[ 2018-06-12T22:27:28+08:00 ] 127.0.0.1 /blog/index.php/Admin/Link/link_update_validate.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `blog_link` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `blog_link` SET `title`='不懂就百度',`sort`='2',`desc`='这是百度',`url`='https://www.baidu.com' WHERE `id` = 5 [ RunTime:0.0005s ]
+
+[ 2018-06-12T22:27:29+08:00 ] 127.0.0.1 /blog/index.php/Admin/Link/link_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `blog_link` ORDER BY sort desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 73 行.
+NOTIC: [8] Undefined index: link_url D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 74 行.
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 73 行.
+NOTIC: [8] Undefined index: link_url D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 74 行.
+NOTIC: [8] Undefined index: link_logo D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 73 行.
+NOTIC: [8] Undefined index: link_url D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Admin\21344ac734c59e15667b9f81a2e36190.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005919s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005961s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000241s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000613s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000670s ]
+

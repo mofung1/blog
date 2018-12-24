@@ -1,0 +1,216 @@
+[ 2018-12-24T20:30:37+08:00 ] 127.0.0.1 /blog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000767s ]
+SQL: SHOW COLUMNS FROM `blog_carousel` [ RunTime:0.0343s ]
+SQL: SELECT * FROM `blog_carousel`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0443s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_article` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `blog_link` ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`title` FROM `blog_article` ORDER BY rand() LIMIT 5   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined variable: visitor_code D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 113 行.
+NOTIC: [8] Undefined variable: ismobile D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 140 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.168792s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.168821s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000716s ]
+
+[ 2018-12-24T20:30:38+08:00 ] 127.0.0.1 /blog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001003s ]
+SQL: SHOW COLUMNS FROM `blog_carousel` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `blog_carousel`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_article` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `blog_link` ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`title` FROM `blog_article` ORDER BY rand() LIMIT 5   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined variable: visitor_code D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 113 行.
+NOTIC: [8] Undefined variable: ismobile D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 140 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008374s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008409s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000526s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000565s ]
+
+[ 2018-12-24T20:30:42+08:00 ] 127.0.0.1 /blog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000894s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000993s ]
+SQL: SHOW COLUMNS FROM `blog_carousel` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `blog_carousel`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_article` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `blog_link` ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`title` FROM `blog_article` ORDER BY rand() LIMIT 5   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+NOTIC: [8] Undefined variable: visitor_code D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 113 行.
+NOTIC: [8] Undefined variable: ismobile D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 140 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009964s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009997s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000557s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000600s ]
+
+[ 2018-12-24T20:30:43+08:00 ] 127.0.0.1 /blog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000639s ]
+SQL: SHOW COLUMNS FROM `blog_carousel` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `blog_carousel`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0042s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `blog_article` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `blog_link` ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`title` FROM `blog_article` ORDER BY rand() LIMIT 5   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+NOTIC: [8] Undefined variable: visitor_code D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 113 行.
+NOTIC: [8] Undefined variable: ismobile D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 140 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009677s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000486s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2018-12-24T20:30:58+08:00 ] 127.0.0.1 /blog/index.php/Home/Article/article_info.html?id=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0169s ]
+SQL: SELECT * FROM `blog_article` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `blog_article` SET `visitor`=visitor+1 WHERE `id` = 17 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `blog_link` ORDER BY sort desc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`title` FROM `blog_article` ORDER BY rand() LIMIT 5   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] Undefined variable: ismobile D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Home\cb5c2262658e8d5174192b068cf3c2a0.php 第 132 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030504s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000532s ]
+
+[ 2018-12-24T20:30:58+08:00 ] 127.0.0.1 /blog/index.php/Home/Article/assets/i/f10.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+
+[ 2018-12-24T20:31:00+08:00 ] 127.0.0.1 /blog/index.php/Home/Article/article_info.html?id=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000767s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `blog_article` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `blog_article` SET `visitor`=visitor+1 WHERE `id` = 17 [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `blog_link` ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`title` FROM `blog_article` ORDER BY rand() LIMIT 5   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8] Undefined variable: ismobile D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Home\cb5c2262658e8d5174192b068cf3c2a0.php 第 132 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008173s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008221s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000545s ]
+
+[ 2018-12-24T20:31:00+08:00 ] 127.0.0.1 /blog/index.php/Home/Article/assets/i/f10.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+
+[ 2018-12-24T20:31:02+08:00 ] 127.0.0.1 /blog/index.php/Home/Article/article_info.html?id=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `blog_article` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `blog_article` SET `visitor`=visitor+1 WHERE `id` = 17 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `blog_link` ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`title` FROM `blog_article` ORDER BY rand() LIMIT 5   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined variable: ismobile D:\PHPstudy\WWW\blog\Application\Runtime\Cache\Home\cb5c2262658e8d5174192b068cf3c2a0.php 第 132 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007031s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000490s ]
+
+[ 2018-12-24T20:31:02+08:00 ] 127.0.0.1 /blog/index.php/Home/Article/assets/i/f10.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+

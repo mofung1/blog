@@ -1,0 +1,26 @@
+[ 2018-06-17T23:09:10+08:00 ] 127.0.0.1 /blog/index.php/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `blog_carousel` [ RunTime:0.0491s ]
+SQL: SELECT * FROM `blog_carousel`  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0277s ]
+SQL: SELECT * FROM `blog_article`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0436s ]
+SQL: SELECT * FROM `blog_link` ORDER BY sort desc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.174001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.174053s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000651s ]
+

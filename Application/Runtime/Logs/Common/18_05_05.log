@@ -1,0 +1,6 @@
+[ 2018-05-05T10:34:28+08:00 ] 127.0.0.1 /tp_blog/index.php/admin2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+ERR: 无法加载模块:Admin2
+

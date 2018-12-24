@@ -1,0 +1,47 @@
+﻿<!--head-->
+<include file='Base/_meta' />
+
+<!--主菜单-->
+<include file='Base/_header' />
+
+<!--子菜单-->
+<include file='Base/_menu' />
+
+<!--主窗口-->
+<include file='Base/_content' />
+
+<!--footer-->
+<include file='Base/_footer' />
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__PUBLIC__/Admin/lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
+<script type="text/javascript">
+
+    $(function(){
+        $("body").Huitab({
+            tabBar:".navbar-wrapper .navbar-levelone",
+            tabCon:".Hui-aside .menu_dropdown",
+            className:"current",
+            index:0,
+        });
+    });
+
+    function logout(){
+        $.ajax({
+            url:"{:U('Login/logout_validate')}",
+            type: "POST",
+            data: {},
+            success:function(res){
+                console.log(res);
+                if (res) {window.location.href = "{:U('Login/index')}";}
+            },
+            error:function(res){
+                alert("提交失败！");
+            }
+        });
+    }
+
+</script>
+
+</body>
+</html>

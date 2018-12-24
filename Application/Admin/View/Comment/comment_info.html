@@ -1,0 +1,35 @@
+<!--列表-->
+<extend name="Base/index" />
+<block name="content">
+
+    <article class="page-container">
+
+        <div class="panel panel-default">
+            <div class="panel-header">留言详情</div>
+            <div class="panel-body">
+                <div class="row c1">
+                    <div class="col-xs-6 col-sm-6 text-l">留言者：{$data['name']}</div>
+
+                  <!--   <div class="col-xs-6 col-sm-6 text-l">排&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;序：{$data['sort']}</div> -->
+                    <div class="col-xs-6 col-sm-6 text-l">联系方式：{$data['contact']}</div>
+                    
+                    <div class="col-xs-6 col-sm-6 text-l">添加时间：{$data['time']|date='Y-m-d',###}</div>
+
+                    <div class="col-xs-6 col-sm-6 text-l"><br/></div>
+                    <div class="col-xs-6 col-sm-6 text-l"><br/></div>
+                </div>
+
+                <div class="row c1">
+                    <div class="formControls col-xs-12 col-sm-12">
+                        留言内容：{$data['comment']}
+                    </div>
+
+                </div>
+            </div> <br/><br/><br/><br/><br/> <br/><br/><br/><br/>
+        </div>
+    </article>
+</block>
+
+
+
+

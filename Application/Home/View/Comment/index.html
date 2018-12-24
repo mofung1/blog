@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+    <include file="Base/head"/>
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/comment.css">
+    <include file="Base/header" menu="4"/>
+    <style>
+
+    </style>
+<body id="blog">
+
+<div class="am-g am-g-fixed blog-fixed" style="background-color: white">
+    <div class="am-u-md-8 am-u-sm-12">
+        <if condition="data eq null">
+            <div>暂无留言</div>
+            <else />
+            <!-- <div class="scroll-box" style="height:400px;overflow-y:auto"> -->
+            <!-- <div class="scroll-box" style="height:400px;">
+                <ul>
+                    <volist name="data" id="vo">
+                        <li>{$vo.name}：{$vo.comment}</li>
+                    </volist>
+                </ul>
+            </div> -->
+
+            <div class="list-box" style="border: 1px solid #EEE;height: 550px;overflow:hidden;">
+                <div data-am-widget="list_news" class="am-list-news am-list-news-default" style="height: 550px;overflow-y: auto;">
+                  <!--列表标题-->
+                    <div class="am-list-news-hd am-cf">
+                        <h2>全部留言</h2>
+                    </div>
+
+                    <div class="am-list-news-bd">
+                        <ul class="am-list">
+                            <volist name="data" id="vo">
+                                <li class="am-g" style="width: 100%;word-wrap:break-word; word-break:break-all; overflow: hidden;  ">
+                                    <a href="##"><i style="color: red">{$vo.name}</i>：{$vo.comment}</a>
+                                    <span style="color:#999999">{$vo['time'] | date="Y-m-d H:m:s",###}</span>
+                                </li>
+                            </volist>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pages" ><ul style="padding: 0">{$page}</ul></div> 
+        </if>
+        
+<br>
+        <form action="" class="am-form am-g" id="comment_form">
+            <h3 class="blog-comment">评论</h3>
+                <fieldset>
+                    <div class="am-form-group am-u-sm-4 blog-clear-left">
+                      <input type="text" class="" name="name" placeholder="名字">
+                    </div>
+                    <div class="am-form-group am-u-sm-4">
+                      <input type="email" class="" name="contact" placeholder="邮箱">
+                    </div>
+                
+                    <div class="am-form-group">
+                      <textarea class="" rows="5" name="comment" placeholder="请写下你的留言吧"></textarea>
+                    </div>
+                
+                    <p><button type="submit" class="am-btn am-btn-default" id="btn">发表评论</button></p>
+                </fieldset>
+        </form>
+
+    </div>
+    <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
+        <include file="Base/sidebar"/>
+    </div>
+</div>
+<!-- content end -->
+
+    <include file="Base/footer"/>
+
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="__PUBLIC__/Home/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="__PUBLIC__/Home/js/amazeui.min.js"></script>
+<!-- <script src="__PUBLIC__/Home/js/comment.js"></script> -->
+<script>
+    $("#btn").click(function(){
+        var form = decodeURIComponent($("#comment_form").serialize(),true);
+
+        $.ajax({
+            url:"{:U('Comment/comment_validate')}",
+            data:form,
+            type:"POST",
+            success:function(res) {
+                if (res == 1) {alert("留言成功");}
+                else if (res == 21) {alert("请填写你的姓名");}
+                else if (res == 22) {alert("请填写你的联系方式");}
+                else if (res == 23) {alert("请填写你的留言");}
+                else if (res == 2) {alert("出错了,请联系管理员");}
+                else {alert("出错了,请联系管理员");}
+           },
+            error:function(res){
+                console.log("提交失败");
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+﻿<!--管理员列表-->
+<extend name="Base/index" />
+<block name="content">
+
+	<!--导航标题-->
+	<include file="Base/_title" title1="后台" title2="管理员" title3="管理员列表"/>
+
+	<!--内容-->
+	<div class="page-container">
+
+		<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l">
+            <a href="javascript:;" onclick="admin_add(0)" class="btn btn-danger radius">添加管理员</a>
+		</div>
+
+		<div class="mt-20">
+			<table class="table table-border table-bordered table-hover table-bg table-sort">
+				<thead>
+				<tr class="text-c">
+					<th width="40">序号</th>                  <!--1-->
+					<th width="80">管理员ID</th>            <!--2-->
+					<th width="120">管理员名称</th>            <!--3-->
+					<th width="80">添加时间</th>           <!--5-->
+					<th width="80">操作</th>             <!--7-->
+				</tr>
+				</thead>
+
+				<tbody>
+				<volist name="list" id="vo">
+					<tr class="text-c">
+						<td>{$i}</td>
+						<td>{$vo.id}</td>
+						<td>{$vo.admin_name}</td>
+						<td>
+							<if condition="$vo['add_time'] == 0"> -- <else /> {$vo['add_time']|date='Y-m-d',###}</if>
+						</td>
+
+						<td class="td-manage">
+							<a title="编辑" href="javascript:;" onclick="admin_pwd_edit({$vo['id']})" class="ml-5" style="text-decoration:none">修改密码</a>
+							<a title="删除" href="javascript:;" onclick="admin_del({$vo['id']})" class="ml-5" style="text-decoration:none">删除</a>
+                        </td>
+					</tr>
+				</volist>
+				</tbody>
+
+			</table>
+		</div>
+	</div>
+
+	<!--请在下方写此页面业务相关的脚本-->
+    <script type="text/javascript" src="__PUBLIC__/Admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$('.table-sort').dataTable({
+				"aaSorting": [[0, "asc" ]],//默认第几个排序
+				"bStateSave": true,//状态保存
+				"aoColumnDefs": [
+					//{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+					// {"orderable":false,"aTargets":[6]}// 制定列不参与排序
+				]
+			});
+		});
+		/*管理员-密码修改*/
+		function admin_pwd_edit(id){
+			var url = "{:U('Admin/admin_pwd_edit')}?id="+id;
+			var index = layer.open({
+				type: 2,
+				title: "管理员密码修改",
+				content: url,
+			});
+			layer.full(index);
+		}
+
+        /*管理员-添加*/
+        function admin_add(id){
+            var url = "{:U('Admin/admin_add')}?id="+id;
+            var index = layer.open({
+                type: 2,
+                title: "添加管理员",
+                content: url,
+                end: function(index, layero){    //退出刷新
+                    window.location.reload();
+                }
+            });
+            layer.full(index);
+        }
+		// /*用户-删除*/
+		
+		function admin_del(id){
+			layer.confirm('确认要删除吗？',function(index){
+
+				$.ajax({
+					type: 'POST',
+					dataType: 'json',
+					url:"{:U('Admin/admin_del_validate')}",
+					data: {id:id},
+					success: function(res){
+
+						if (res == 1) {layer.msg('已删除!');window.location.reload();}
+						else if (res == 2) {layer.msg('删除失败!');}
+						else if (res == 3) {layer.msg('用户不存在!');}
+
+					},
+					error:function(res) {
+						layer.msg('提交失败!',{icon:1,time:1000});
+					},
+				});
+			});
+
+		}
+
+	</script>
+
+</block>
+

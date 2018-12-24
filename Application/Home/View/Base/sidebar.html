@@ -1,0 +1,66 @@
+<style>
+    #hamster ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+    }
+</style>
+
+<if condition="$ismobile eq 1">
+    <div></div>
+<else/>
+    <div class="blog-sidebar-widget blog-bor">
+        <object type="application/x-shockwave-flash" 
+            style="outline:none;" 
+            data="__PUBLIC__/Home/swf/hamster.swf"
+            width="280" height="180" 
+            id="__wow_video_player__463292481" 
+            title="Adobe Flash Player">
+            <param name="movie" value="__PUBLIC__/Home/swf/hamster.swf">
+            <param name="AllowScriptAccess" value="always">
+            <param name="wmode" value="opaque">
+        </object>
+    </div>
+</if>
+
+<div class="blog-clear-margin blog-sidebar-widget blog-bor am-g ">
+    <h2 class="blog-title"><span>推荐文章</span></h2>
+    <div class="am-u-sm-12 blog-clear-padding">
+        <volist name="rand_article" id="vo">
+            <a href="{:U('Article/article_info')}?id={$vo['id']}" class="blog-tag">{$vo['title']}</a>
+            
+        </volist>
+    </div>
+</div>
+
+<div class="blog-clear-margin blog-sidebar-widget blog-bor am-g" >
+    <h2 class="blog-title"><span>友情链接</span></h2>
+        <div class="am-u-sm-12 blog-clear-padding">
+        <volist name="link" id="vo">
+            <a href="{$vo.url}" class="blog-tag" target="view_window">{$vo.title}</a>
+        </volist>
+       
+        </div>
+</div>
+
+<div class="blog-sidebar-widget blog-bor">
+    <h2 class="blog-text-center blog-title"><span>联系我</span></h2>
+    <p>
+        <a href=""><span class="am-icon-weixin am-icon-fw blog-icon"></span></a>
+        <a href=""><span class="am-icon-qq am-icon-fw am-primary blog-icon"></span></a>
+        <a href="https://github.com/" target="view_window"><span class="am-icon-github am-icon-fw blog-icon" ></span></a>
+        <a href="https://weibo.com/u/2584224757/home?topnav=1&wvr=6" target="view_window"><span class="am-icon-weibo am-icon-fw blog-icon"></span></a>
+    </p>
+</div>
+
+<!-- <script src="__PUBLIC__/Home/js/clock.js"></script>
+<script src="__PUBLIC__/Home/js/clockjs.js"></script> -->
+
+
+
+
+

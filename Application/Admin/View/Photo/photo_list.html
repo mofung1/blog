@@ -1,0 +1,93 @@
+<!--会员列表-->
+<extend name="Base/index" />
+<block name="content">
+
+    <!--导航标题-->
+    <include file="Base/_title" title1="后台" title2="内容管理" title3="相册列表"/>
+
+    
+
+    <!--内容-->
+    <div class="page-container">
+        
+        <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l">
+        <a href="javascript:;" onclick="add(0)" class="btn btn-danger radius">新增相片</a>
+    </div>
+
+        <div class="mt-20">
+            <table class="table table-border table-bordered table-hover table-bg table-sort" style="l">
+                <thead>
+                    <tr class="text-c">
+                        <th width="40">序号</th>          <!--1-->
+                        <th width="80">图片</th>         <!--3-->
+                        <th width="80">简述</th>          <!--7-->
+                        <th width="80">时间</th>          <!--6-->
+                        <th width="80">操作</th>         <!--8-->
+                    </tr>
+                </thead>
+
+                <tbody>
+                <volist name="list" id="vo" key="i">
+                    <tr class="text-c">
+                        <td>{$i}</td>
+                        <td><img class="product-thumb" height="" width="" style="max-height: 200px;max-width: 200px; min-width: 100px; min-height:100px" src="__ROOT__{$vo.photo}"></td>
+                        <td>{$vo.content}</td>
+                        <td>{$vo.add_time|date='Y-m-d',###}</td>
+                        <td class="td-manage">
+                            <a title="删除" href="javascript:;" onclick="photo_del(this,{$vo.id})" class="ml-5" style="text-decoration:none">删除</a>
+                        </td>
+
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+    <!--请在下方写此页面业务相关的脚本-->
+    <script type="text/javascript" src="__PUBLIC__/Admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript">
+
+        /*table*/
+        $(function(){
+            $('.table-sort').dataTable({
+                "aaSorting": [[ 0, "asc" ]],//默认第几个排序
+                "bStateSave": true,//状态保存
+            });
+        });
+
+        /*新增*/
+        function add(id){
+            var url = "{:U('Photo/photo_add')}?id="+id;
+            layer_show("相册",url,550,360);
+        }
+
+        /*删除*/
+        function photo_del(obj,id) {
+            layer.confirm('确认要删除吗？',function(index){
+                $.ajax({
+                    url:"{:U('Photo/photo_del_validate')}",
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {id:id},
+                    success: function(res){
+                        console.log(res);
+                        if (res == 1) { $(obj).parents("tr").remove(); layer.msg('已删除!');}
+                        else if (res == 2) {layer.msg('删除失败!');}
+                        else if (res == 3) {layer.msg('不存在!');}
+                    },
+                    error:function(res) {
+                        layer.msg('提交失败!');
+                    },
+                });
+            });
+        }
+
+
+    </script>
+
+</block>
+

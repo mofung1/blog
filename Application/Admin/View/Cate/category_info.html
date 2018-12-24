@@ -1,0 +1,31 @@
+<!--会员列表-->
+<extend name="Base/index" />
+<block name="content">
+
+    <article class="page-container">
+
+        <div class="panel panel-default">
+            <div class="panel-header">详情</div>
+            <div class="panel-body">
+                <div class="row c1">
+                    <div class="col-xs-6 col-sm-6 text-l">栏目名称：{$data['catename']}</div>
+               <!--      <div class="col-xs-6 col-sm-6 text-l">导&nbsp;&nbsp;航&nbsp;&nbsp;栏：<if condition="$data['show_in_nav'] == 0"> 不显示<elseif condition="$data['show_in_nav'] == 1"/> 显示<else /> --</if></div> -->
+                    <div class="col-xs-6 col-sm-6 text-l">排&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;序：{$data['sort']}</div>
+                    
+                    
+                    <div class="col-xs-6 col-sm-6 text-l">添加时间：{$data['add_time']|date='Y-m-d',###}</div>
+
+                    <div class="col-xs-6 col-sm-6 text-l"><br/></div>
+                    <div class="col-xs-6 col-sm-6 text-l"><br/></div>
+                </div>
+
+                <div class="row c1">
+                    <div class="formControls col-xs-12 col-sm-12">
+                        描述：{$data['catedesc']}
+                    </div>
+
+                </div>
+            </div> <br/><br/><br/><br/><br/> <br/><br/><br/><br/>
+        </div>
+    </article>
+</block>

@@ -1,0 +1,41 @@
+<style>
+    .current{color: #10D07A;}
+    /*body{background-image:url('__PUBLIC__/Home/images/bg.jpg');}*/
+</style>
+
+<header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
+<div class="am-u-sm-8 am-u-sm-centered">
+    <img width="200" src="__PUBLIC__/Home/images/logo.png" alt="mofung1 Logo" style="height: 60px" />
+</div>
+</header>
+
+<div style="background-color: white">
+<nav class="am-g am-g-fixed blog-fixed blog-nav" style="padding: 10px;">
+<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only blog-button" data-am-collapse="{target: '#blog-collapse'}" ><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+    <div class="am-collapse am-topbar-collapse" id="blog-collapse">
+        <ul class="am-nav am-nav-pills am-topbar-nav">
+            <input type="hidden" id="menu_id" value=[menu]>
+            <li><a class="menu_nav" href="{:U('Index/index')}">主页</a></li>
+            <li><a class="menu_nav" href="{:U('Article/index')}">php</a></li>
+            <li><a class="menu_nav" href="{:U('Photo/index')}">相册</a></li>
+            <li><a class="menu_nav" href="{:U('Comment/index')}">留言板</a></li>
+ 
+        </ul>
+
+        <form class="am-topbar-form am-topbar-right am-form-inline" role="search" action="{:U('Base/search_list')}" method="post">
+            <div class="am-form-group">
+                <input type="text" class="am-form-field am-input-sm" placeholder="搜索" name="search">
+            </div>
+        </form>
+
+    </div>
+</nav>
+</div>
+<script src="__PUBLIC__/Home/js/jquery-3.1.1.min.js"></script>
+<script>
+    //主菜单选择
+    $(function(){
+        $($('.menu_nav')[parseInt($('#menu_id').val())-1]).addClass('current').siblings().removeClass('current');
+    });
+
+</script>

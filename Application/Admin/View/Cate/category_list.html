@@ -1,0 +1,105 @@
+<!--会员列表-->
+<extend name="Base/index" />
+<block name="content">
+
+    <!--导航标题-->
+    <include file="Base/_title" title1="后台" title2="栏目管理" title3="栏目列表"/>
+
+    <!--内容-->
+    <div class="page-container">
+
+        <div class="mt-20">
+            <table class="table table-border table-bordered table-hover table-bg table-sort" style="l">
+                <thead>
+                    <tr class="text-c">
+                        <th width="40">序号</th>          <!--1-->
+                        <th width="80">栏目名</th>         <!--3-->
+                        <th width="80">简述</th>          <!--7-->
+                        <th width="80">时间</th>          <!--6-->
+                        <th width="80">操作</th>         <!--8-->
+                    </tr>
+                </thead>
+
+                <tbody>
+                <volist name="list" id="vo" key="i">
+                    <tr class="text-c">
+                        <!-- <td>{$i}</td> -->
+                        <td>{$vo.sort}</td>
+                        <td>{$vo.catename}</td>
+
+                        <td>{$vo.catedesc}</td>
+                        <td>{$vo.add_time|date='Y-m-d',###}</td>
+                        <td class="td-manage">
+                            <a title="查看" href="javascript:;" onclick="category_show({$vo.id})" class="ml-5" style="text-decoration:none">查看</a>
+                            <a title="编辑" href="javascript:;" onclick="category_edit({$vo.id})" class="ml-5" style="text-decoration:none">编辑</a>
+                            <a title="删除" href="javascript:;" onclick="category_del(this,{$vo.id})" class="ml-5" style="text-decoration:none">删除</a>
+
+                        </td>
+
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+    <!--请在下方写此页面业务相关的脚本-->
+    <script type="text/javascript" src="__PUBLIC__/Admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript">
+
+        /*table*/
+        $(function(){
+            $('.table-sort').dataTable({
+                "aaSorting": [[ 0, "asc" ]],//默认第几个排序
+                "bStateSave": true,//状态保存
+            });
+        });
+
+
+        /*分类-查看*/
+        function category_show(id){
+            var url = "{:U('Cate/category_info')}?id="+id;
+            layer_show("栏目",url,500,360);
+        }
+
+        /*分类-编辑*/
+        function category_edit(id){
+            var url = "{:U('Cate/category_edit')}?id="+id;
+            var index = layer.open({
+                type: 2,
+                title: "编辑文章分类",
+                content: url,
+                end: function(index, layero){window.location.reload();},    //退出刷新
+            });
+            layer.full(index);
+        }
+
+        /*分类-删除*/
+        function category_del(obj,id) {
+            layer.confirm('确认要删除吗？',function(index){
+                $.ajax({
+                    url:"{:U('Cate/category_del_validate')}",
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {id:id},
+                    success: function(res){
+                        console.log(res);
+                        if (res == 1) { $(obj).parents("tr").remove(); layer.msg('已删除!');}
+                        else if (res == 2) {layer.msg('删除失败!');}
+                        else if (res == 3) {layer.msg('栏目不存在!');}
+                    },
+                    error:function(res) {
+                        layer.msg('提交失败!');
+                    },
+                });
+            });
+        }
+
+
+    </script>
+
+</block>
+

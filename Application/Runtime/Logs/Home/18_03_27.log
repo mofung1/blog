@@ -1,0 +1,20 @@
+[ 2018-03-27T21:19:16+08:00 ] 127.0.0.1 /tp_blog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.043164s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.043212s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.047870s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.047925s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.085780s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.085838s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.022130s ]
+INFO: [ app_end ] --END-- [ RunTime:0.022171s ]
+

@@ -1,0 +1,19 @@
+ .scroll-box {
+    /*width:400px;*/
+    height:280px;
+    border:1px solid #e5e5e5;
+    margin:20px auto;
+    overflow:hidden;
+}
+.scroll-box ul {
+    list-style:none;
+    width:100%;
+    height:100%;
+}
+.scroll-box ul li {
+    width:100%;
+    height:40px;
+    box-sizing:border-box;
+    line-height:40px;
+    /*text-align:center;*/
+}

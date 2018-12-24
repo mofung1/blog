@@ -1,0 +1,46 @@
+﻿<!--会员列表-->
+<extend name="Base/index" />
+<block name="content">
+
+	<!--导航标题-->
+	<include file="Base/_title" title1="后台" title2="首页" title3=""/>
+
+	<div class="page-container">
+		<p class="f-20 text-success">后台管理系统！</p>
+
+		<table class="table table-border table-bordered table-bg mt-20">
+			<thead>
+			<tr>
+				<th colspan="2" scope="col">服务器信息</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<th width="30%">系统版本</th>
+				<td><span id="lbServerName">1.0</span></td>
+			</tr>
+			<tr>
+				<td>客户端IP</td>
+				<td>{$ip}</td>
+			</tr>
+			<tr>
+				<td>服务端IP </td>
+				<td>{$server_ip}</td>
+			</tr>
+			<tr>
+				<td>PHP版本 </td>
+				<td>{$php_version}</td>
+			</tr>
+			<tr>
+				<td>服务器操作系统 </td>
+				<td>{$php_os}</td>
+			</tr>
+			<tr>
+				<td>服务端信息 </td>
+				<td>{$server}</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+
+</block>

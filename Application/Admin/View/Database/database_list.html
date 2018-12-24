@@ -1,0 +1,112 @@
+<!--数据备份--列表-->
+<extend name="Base/index" />
+<block name="content">
+
+    <!--导航标题-->
+    <include file="Base/_title" title1="后台" title2="系统管理" title3="数据备份"/>
+
+    <!--内容-->
+    <div class="page-container">
+
+        <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l">
+            <a href="javascript:;" onclick="database_backup(0)" class="btn btn-danger radius">备份数据库</a>
+        </div>
+
+        <div class="mt-20">
+            <table class="table table-border table-bordered table-hover table-bg table-sort">
+                <thead>
+                <tr class="text-c">
+                    <th width="40">序号</th>                  <!--1-->
+                    <th width="80">名称</th>                 <!--2-->
+                    <th width="300">备注</th>                  <!--3-->
+                    <th width="100">管理员</th>                  <!--4-->
+                    <th width="80">备份时间</th>           <!--5-->
+
+                    <th width="80">操作</th>             <!--6-->
+                </tr>
+                </thead>
+
+                <tbody>
+                <volist name="list" id="vo">
+                    <tr class="text-c">
+                        <td>{$i}</td>
+                        <td>{$vo['database_name']}</td>
+                        <td>{$vo['remark']}</td>
+                        <td>{$vo['admin_name']}</td>
+                        <td><if condition="$vo['add_time'] == 0"> -- <else /> {$vo['add_time']|date='Y-m-d',###}</if></td>
+
+                        <td class="td-manage">
+                            <a title="查看" href="javascript:;" onclick="database_show({$vo['database_id']})" class="ml-5" style="text-decoration:none">查看</a>
+                            <a title="恢复" href="javascript:;" onclick="database_recovery({$vo['database_id']})" class="ml-5" style="text-decoration:none">恢复</a>
+                        </td>
+                    </tr>
+                </volist>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <!--请在下方写此页面业务相关的脚本-->
+    <script type="text/javascript" src="__PUBLIC__/Admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            $('.table-sort').dataTable({
+                "aaSorting": [[0, "asc" ]],//默认第几个排序
+                "bStateSave": true,//状态保存
+                "aoColumnDefs": [
+                    //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+                    {"orderable":false,"aTargets":[5]}// 制定列不参与排序
+                ]
+            });
+        });
+
+        /*数据库-查看*/
+        function database_show(id){
+            var url = "{:U('Database/database_info')}?id="+id;
+            layer_show("数据库信息",url,600,380);
+        }
+
+        /*数据库-备份*/
+        function database_backup(id)
+        {
+            var url = "{:U('Database/database_backup')}?id="+id;
+            var index = layer.open({
+                type: 2,
+                title: "数据库备份",
+                content: url,
+                end: function(index, layero){    //退出刷新
+                    window.location.reload();
+                }
+            });
+            layer.full(index);
+        }
+        /*数据库-恢复*/
+        function database_recovery(id){
+            layer.confirm('确认要恢复数据吗？',function(index){
+
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url:"{:U('Database/database_recovery_validate')}",
+                    data: {id:id},
+                    success: function(res){
+                        console.log(res)
+                        if (res == 1) {layer.msg('恢复成功!'); window.location.reload();}
+                        else if (res == 2) {layer.msg('恢复失败!');}
+                        else if (res == 3) {layer.msg('数据库不存在!');}
+                        else if (res == 11) {layer.msg('备份文件不存在!');}
+
+                    },
+                    error:function(res) {
+                        layer.msg('提交失败!');
+                    },
+                });
+            });
+        }
+
+    </script>
+
+</block>
+

@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>mofung1-blog</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="icon" type="image/png" href="/blog/Public/Home/i/favicon.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="/blog/Public/Home/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="/blog/Public/Home/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileImage" content="/blog/Public/Home/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <link rel="stylesheet" href="/blog/Public/Home/css/amazeui.min.css">
+    <link rel="stylesheet" href="/blog/Public/Home/css/app.css">
+    <link rel="stylesheet" href="/blog/Public/Home/css/player.css">
+    <link rel="stylesheet" href="/blog/Public/Home/css/yezi.css">
+    <link rel="stylesheet" href="/blog/Public/Home/css/pages.css">
+</head>
+
+
+    <!-- <div style="background-color: white"> -->
+    <style>
+    .current{color: #10D07A;}
+    /*body{background-image:url('/blog/Public/Home/images/bg.jpg');}*/
+</style>
+
+<header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
+<div class="am-u-sm-8 am-u-sm-centered">
+    <img width="200" src="/blog/Public/Home/images/logo.png" alt="mofung1 Logo" style="height: 60px" />
+</div>
+</header>
+
+<div style="background-color: white">
+<nav class="am-g am-g-fixed blog-fixed blog-nav" style="padding: 10px;">
+<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only blog-button" data-am-collapse="{target: '#blog-collapse'}" ><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+    <div class="am-collapse am-topbar-collapse" id="blog-collapse">
+        <ul class="am-nav am-nav-pills am-topbar-nav">
+            <input type="hidden" id="menu_id" value=1>
+            <li><a class="menu_nav" href="/blog/index.php/Home/Index/index.html">主页</a></li>
+            <li><a class="menu_nav" href="/blog/index.php/Home/Article/index.html">php</a></li>
+            <li><a class="menu_nav" href="/blog/index.php/Home/Photo/index.html">相册</a></li>
+            <li><a class="menu_nav" href="/blog/index.php/Home/Comment/index.html">留言板</a></li>
+ 
+        </ul>
+
+        <form class="am-topbar-form am-topbar-right am-form-inline" role="search" action="/blog/index.php/Home/Base/search_list.html" method="post">
+            <div class="am-form-group">
+                <input type="text" class="am-form-field am-input-sm" placeholder="搜索" name="search">
+            </div>
+        </form>
+
+    </div>
+</nav>
+</div>
+<script src="/blog/Public/Home/js/jquery-3.1.1.min.js"></script>
+<script>
+    //主菜单选择
+    $(function(){
+        $($('.menu_nav')[parseInt($('#menu_id').val())-1]).addClass('current').siblings().removeClass('current');
+    });
+
+</script>
+
+    <!-- </div> -->
+<body id="blog" >
+
+<!-- <div id="botAgregar"></div> -->
+
+    
+<!-- banner start -->
+<div class="am-g am-g-fixed blog-fixed am-u-sm-centered blog-article-margin" style="margin-top: 0px;margin-bottom: 0px">
+    <div data-am-widget="slider" class="am-slider am-slider-b1" data-am-slider='{&quot;controlNav&quot;:false}' >
+    <ul class="am-slides">
+        <li>
+                <img src="/blog/Uploads/carousel/20180609/5b1bf96b2cdc6.jpg">
+            </li><li>
+                <img src="/blog/Uploads/carousel/20180610/5b1bfc175de14.jpg">
+            </li>        
+    </ul>
+    </div>
+</div>
+
+
+
+
+<div class="am-g am-g-fixed blog-fixed" style="background-color: white">
+    <div class="am-u-md-8 am-u-sm-12">
+
+        <article class="am-g blog-entry-article">
+                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img" style="height: 200px;width: 400px">
+                    <a href="/blog/index.php/Home/Article/article_info.html?id=14">
+                    <img src="/blog/Uploads/article/20180724/5b573ac5e7e33.jpg" alt="出错请联系管理员" class="am-u-sm-12" style="height: 100%;width: 100%">
+                    </a>
+                </div>
+                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+                    <span class="am-badge am-badge-primary am-radius">小莫 &nbsp;</span>
+                    <span class="am-badge am-badge-warning am-radius">39</span>
+                    <span class="am-badge am-badge-success am-radius">2018-07-24 22:42:14</span>
+                    <h1><a href="/blog/index.php/Home/Article/article_info.html?id=14&code=88526">百度</a></h1>
+                    <p>21</p>
+<!--                     <p style="border:1px solid"><a href="" class="">continue reading</a></p> -->
+                </div>
+            </article><article class="am-g blog-entry-article">
+                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img" style="height: 200px;width: 400px">
+                    <a href="/blog/index.php/Home/Article/article_info.html?id=15">
+                    <img src="/blog/Uploads/article/20180608/5b1965a212702.jpg" alt="出错请联系管理员" class="am-u-sm-12" style="height: 100%;width: 100%">
+                    </a>
+                </div>
+                <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+                    <span class="am-badge am-badge-primary am-radius">22 &nbsp;</span>
+                    <span class="am-badge am-badge-warning am-radius">5</span>
+                    <span class="am-badge am-badge-success am-radius">2018-06-08 01:04:34</span>
+                    <h1><a href="/blog/index.php/Home/Article/article_info.html?id=15&code=88526">11</a></h1>
+                    <p>22</p>
+<!--                     <p style="border:1px solid"><a href="" class="">continue reading</a></p> -->
+                </div>
+            </article>        <!-- <pre>NULL
+</pre> -->
+        <div class="pages"><div>    </div></div>
+        
+    </div>
+
+    <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
+
+        <div class="blog-sidebar-widget blog-bor">
+    <h2 class="blog-text-center blog-title"><span>About ME</span></h2>
+    <img src="/blog/Public/Home/images/weixin.jpg" alt="about me" class="blog-entry-img" >
+    <p>mofung1</p>
+    <p>有一种落差是，你配不上自己的野心，也辜负了所受的苦难。</p>
+</div>
+
+
+        <style>
+    #hamster ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+    }
+</style>
+
+    <div class="blog-sidebar-widget blog-bor">
+        <object type="application/x-shockwave-flash" 
+            style="outline:none;" 
+            data="/blog/Public/Home/swf/hamster.swf"
+            width="280" height="180" 
+            id="__wow_video_player__463292481" 
+            title="Adobe Flash Player">
+            <param name="movie" value="/blog/Public/Home/swf/hamster.swf">
+            <param name="AllowScriptAccess" value="always">
+            <param name="wmode" value="opaque">
+        </object>
+    </div>
+<div class="blog-clear-margin blog-sidebar-widget blog-bor am-g ">
+    <h2 class="blog-title"><span>推荐文章</span></h2>
+    <div class="am-u-sm-12 blog-clear-padding">
+        <a href="/blog/index.php/Home/Article/article_info.html?id=15" class="blog-tag">11</a><a href="/blog/index.php/Home/Article/article_info.html?id=14" class="blog-tag">百度</a>    </div>
+</div>
+
+<div class="blog-clear-margin blog-sidebar-widget blog-bor am-g" >
+    <h2 class="blog-title"><span>友情链接</span></h2>
+        <div class="am-u-sm-12 blog-clear-padding">
+        <a href="http://v3.bootcss.com/" class="blog-tag" target="view_window">Bootstrap中文网</a><a href="http://fanyi.baidu.com/translate?aldtype=16047&amp;query=&amp;keyfrom=baidu&amp;smartresult=dict&amp" class="blog-tag" target="view_window">百度翻译</a><a href="http://www.jq22.com/" class="blog-tag" target="view_window">jquery</a><a href="https://www.baidu.com" class="blog-tag" target="view_window">不懂就百度</a>       
+        </div>
+</div>
+
+<div class="blog-sidebar-widget blog-bor">
+    <h2 class="blog-text-center blog-title"><span>联系我</span></h2>
+    <p>
+        <a href=""><span class="am-icon-weixin am-icon-fw blog-icon"></span></a>
+        <a href=""><span class="am-icon-qq am-icon-fw am-primary blog-icon"></span></a>
+        <a href="https://github.com/" target="view_window"><span class="am-icon-github am-icon-fw blog-icon" ></span></a>
+        <a href="https://weibo.com/u/2584224757/home?topnav=1&wvr=6" target="view_window"><span class="am-icon-weibo am-icon-fw blog-icon"></span></a>
+    </p>
+</div>
+
+<!-- <script src="/blog/Public/Home/js/clock.js"></script>
+<script src="/blog/Public/Home/js/clockjs.js"></script> -->
+
+
+
+
+
+
+        
+    </div>
+</div>
+
+
+    <div data-am-widget="gotop" class="am-gotop am-gotop-fixed" >
+        <a href="#top" title="">
+            <img class="am-gotop-icon-custom" src="/blog/Public/Home/gif/goTop.gif" />
+        </a>
+    </div>
+
+    
+<div id="QPlayer">
+    <div id="pContent">
+        <div id="player">
+            <span class="cover"></span>
+            <div class="ctrl">
+                <div class="musicTag marquee">
+                    <strong>Title</strong>
+                     <span> - </span>
+                    <span class="artist">Artist</span>
+                </div>
+                <div class="progress">
+                    <div class="timer left">0:00</div>
+                    <div class="contr">
+                        <div class="rewind icon"></div>
+                        <div class="playback icon"></div>
+                        <div class="fastforward icon"></div>
+                    </div>
+                    <div class="right">
+                        <div class="liebiao icon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ssBtn">
+                <div class="adf"></div>
+        </div>
+    </div>
+    <ol id="playlist"></ol>
+</div>
+
+
+
+<script>
+
+function bgChange(){
+    var lis= $('.lib');
+    for(var i=0; i<lis.length; i+=2)
+    lis[i].style.background = 'rgba(246, 246, 246, 0.5)';
+}
+window.onload = bgChange;
+</script>
+
+<script>
+    var playlist = [
+        {title:"追光者",artist:"岑宁儿",mp3:"/blog/Public/Home/MP3/岑宁儿 - 追光者.mp3",cover:"/blog/Public/Home/images/song.jpg",},
+        {title:"那个男孩",artist:"汪苏泷",mp3:"/blog/Public/Home/MP3/汪苏泷 - 那个男孩.mp3",cover:"/blog/Public/Home/images/song.jpg",},
+        ];
+    var isRotate = true;
+    var autoplay = false;
+</script>
+
+    
+<footer class="blog-footer" >
+	<!-- <div class="blog-text-center">你的ip地址是127.0.0.1</div> -->
+    <div class="blog-text-center">@2018.mofung1</div>
+</footer>
+   
+
+
+    <script src="/blog/Public/Home/js/jquery.marquee.min.js"></script>
+    <script src="/blog/Public/Home/js/player.js"></script>
+    <script src="/blog/Public/Home/js/jquery.min.js"></script>
+    <script src="/blog/Public/Home/js/jquery.js"></script>
+
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="/blog/Public/Home/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="/blog/Public/Home/js/amazeui.min.js"></script>
+<!-- 绿叶 -->
+<!-- <script type="text/javascript">$.AutomLeafStart({leafsfolder:"/blog/Public/Home/images/yezi/",howmanyimgsare:8,initialleafs:10,maxYposition:-10,multiplyclick:true,multiplynumber:2,infinite:true,fallingsequence:4000});$("#botAgregar").on("click",function(){$.AutomLeafAdd({leafsfolder:"/blog/Public/Home/images/yezi/",add:8,})});</script> -->
+</body>
+</html>

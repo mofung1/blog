@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<include file="Base/head"/>
+<include file="Base/header" menu="3"/>
+<body id="blog-article-sidebar" >
+
+<!-- <div class="am-g am-g-fixed blog-fixed blog-content" style="background-color: white">
+    <figure data-am-widget="figure" class="am am-figure am-figure-default "   data-am-figure="{  pureview: 'false' }">
+        <div id="container">  
+            <volist name="data" id="vo">
+                <div><img src="__ROOT__{$vo.photo}" ><h3 style="text-align: center">{$vo.content}</h3></div>
+            </volist>   
+        </div> 
+    </figure>
+
+</div> -->
+<div class="am-g am-g-fixed blog-fixed blog-content" style="background-color: white">
+  	<ul data-am-widget="gallery" class="am-gallery  am-avg-sm-2
+  am-avg-md-3 am-avg-lg-4 am-gallery-bordered" data-am-gallery="{pureview:{target: 'a'}}">
+	  	<volist name="data" id="vo">
+	      	<li>
+		        <div class="am-gallery-item">
+		            <a href="__ROOT__{$vo.photo}" class="">
+		              <img src="__ROOT__{$vo.photo}"  alt="失败"/>
+		                <h3 class="am-gallery-title">{$vo.content}</h3>
+		                <div class="am-gallery-desc">{$vo['add_time'] | date="Y-m-d,H:i:s",###}</div>
+		            </a>
+		        </div>
+	      	</li>
+		</volist>	
+  	</ul>
+  	
+  	<div class="pages">{$page}</div>
+</div>
+
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="__PUBLIC__/Home/js/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="__PUBLIC__/Home/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<include file="Base/footer"/>
+<script src="__PUBLIC__/Home/js/amazeui.min.js"></script>
+<script src="__PUBLIC__/Home/js/pinto.min.js"></script>
+<script src="__PUBLIC__/Home/js/img.js"></script>
+
+</body>
+</html>

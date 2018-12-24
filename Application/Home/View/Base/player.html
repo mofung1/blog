@@ -1,0 +1,50 @@
+<div id="QPlayer">
+    <div id="pContent">
+        <div id="player">
+            <span class="cover"></span>
+            <div class="ctrl">
+                <div class="musicTag marquee">
+                    <strong>Title</strong>
+                     <span> - </span>
+                    <span class="artist">Artist</span>
+                </div>
+                <div class="progress">
+                    <div class="timer left">0:00</div>
+                    <div class="contr">
+                        <div class="rewind icon"></div>
+                        <div class="playback icon"></div>
+                        <div class="fastforward icon"></div>
+                    </div>
+                    <div class="right">
+                        <div class="liebiao icon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ssBtn">
+                <div class="adf"></div>
+        </div>
+    </div>
+    <ol id="playlist"></ol>
+</div>
+
+
+
+<script>
+
+function bgChange(){
+    var lis= $('.lib');
+    for(var i=0; i<lis.length; i+=2)
+    lis[i].style.background = 'rgba(246, 246, 246, 0.5)';
+}
+window.onload = bgChange;
+</script>
+
+<script>
+    var playlist = [
+        {title:"追光者",artist:"岑宁儿",mp3:"__PUBLIC__/Home/MP3/岑宁儿 - 追光者.mp3",cover:"__PUBLIC__/Home/images/song.jpg",},
+        {title:"那个男孩",artist:"汪苏泷",mp3:"__PUBLIC__/Home/MP3/汪苏泷 - 那个男孩.mp3",cover:"__PUBLIC__/Home/images/song.jpg",},
+        ];
+    var isRotate = true;
+    var autoplay = false;
+</script>

@@ -1,0 +1,93 @@
+<!--会员列表-->
+<extend name="Base/index" />
+<block name="content">
+
+    <!--导航标题-->
+    <include file="Base/_title" title1="后台" title2="系统管理" title3="留言列表"/>
+
+    <!--内容-->
+    <div class="page-container">
+
+        <div class="mt-20">
+            <table class="table table-border table-bordered table-hover table-bg table-sort" style="">
+                <thead>
+                    <tr class="text-c">
+                        <th width="40">序号</th>          <!--1-->
+                        <th width="80">名字</th>         <!--3-->
+                        <th width="80">留言</th>          <!--7-->
+                        <th width="80">联系方式</th>  
+                        <th width="80">时间</th>          <!--6-->
+                        <th width="80">操作</th>         <!--8-->
+                    </tr>
+                </thead>
+
+                <tbody>
+                <volist name="list" id="vo" key="i">
+                    <tr class="text-c">
+                        <td>{$vo.id}</td>
+                        <td>{$vo.name}</td>
+                        <td>{$vo.comment}</td>
+                        <td>{$vo.contact}</td>
+                        <td>{$vo.time|date='Y-m-d',###}</td>
+                        <td class="td-manage">
+                            <a title="查看" href="javascript:;" onclick="comment_show({$vo.id})" class="ml-5" style="text-decoration:none">查看</a>
+                            <a title="删除" href="javascript:;" onclick="comment_del(this,{$vo.id})" class="ml-5" style="text-decoration:none">删除</a>
+
+                        </td>
+
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+    <!--请在下方写此页面业务相关的脚本-->
+    <script type="text/javascript" src="__PUBLIC__/Admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(function(){
+            $('.table-sort').dataTable({
+                "aaSorting": [[ 0, "asc" ]],//默认第几个排序
+                "bStateSave": true,//状态保存
+            });
+        });
+
+
+        /*查看*/
+        function comment_show(id){
+            
+            var url = "{:U('Comment/comment_info')}?id="+id;
+            layer_show("留言",url,500,360);
+        }
+
+
+        /*删除*/
+        function comment_del(obj,id) {
+            layer.confirm('确认要删除吗？',function(index){
+                $.ajax({
+                    url:"{:U('Comment/comment_del_validate')}",
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {id:id},
+                    success: function(res){
+                        console.log(res);
+                        if (res == 1) { $(obj).parents("tr").remove(); layer.msg('已删除!');}
+                        else if (res == 2) {layer.msg('删除失败!');}
+                        else if (res == 3) {layer.msg('留言不存在!');}
+                    },
+                    error:function(res) {
+                        layer.msg('提交失败!');
+                    },
+                });
+            });
+        }
+
+
+    </script>
+
+</block>
+
